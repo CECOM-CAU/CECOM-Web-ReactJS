@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CECOM-Web-ReactJS/static/css/main.8eeab057.chunk.css",
+    "main.js": "/CECOM-Web-ReactJS/static/js/main.691a9307.chunk.js",
+    "main.js.map": "/CECOM-Web-ReactJS/static/js/main.691a9307.chunk.js.map",
+    "runtime-main.js": "/CECOM-Web-ReactJS/static/js/runtime-main.9793a387.js",
+    "runtime-main.js.map": "/CECOM-Web-ReactJS/static/js/runtime-main.9793a387.js.map",
+    "static/js/2.ee87626d.chunk.js": "/CECOM-Web-ReactJS/static/js/2.ee87626d.chunk.js",
+    "static/js/2.ee87626d.chunk.js.map": "/CECOM-Web-ReactJS/static/js/2.ee87626d.chunk.js.map",
+    "index.html": "/CECOM-Web-ReactJS/index.html",
+    "static/css/main.8eeab057.chunk.css.map": "/CECOM-Web-ReactJS/static/css/main.8eeab057.chunk.css.map",
+    "static/js/2.ee87626d.chunk.js.LICENSE.txt": "/CECOM-Web-ReactJS/static/js/2.ee87626d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9793a387.js",
+    "static/js/2.ee87626d.chunk.js",
+    "static/css/main.8eeab057.chunk.css",
+    "static/js/main.691a9307.chunk.js"
+  ]
+}
