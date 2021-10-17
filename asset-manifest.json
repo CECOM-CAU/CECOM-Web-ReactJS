@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/CECOM-Web-ReactJS/static/css/main.bfde937a.chunk.css",
-    "main.js": "/CECOM-Web-ReactJS/static/js/main.bd17f205.chunk.js",
-    "main.js.map": "/CECOM-Web-ReactJS/static/js/main.bd17f205.chunk.js.map",
+    "main.css": "/CECOM-Web-ReactJS/static/css/main.35f3fc20.chunk.css",
+    "main.js": "/CECOM-Web-ReactJS/static/js/main.4bb48aef.chunk.js",
+    "main.js.map": "/CECOM-Web-ReactJS/static/js/main.4bb48aef.chunk.js.map",
     "runtime-main.js": "/CECOM-Web-ReactJS/static/js/runtime-main.9793a387.js",
     "runtime-main.js.map": "/CECOM-Web-ReactJS/static/js/runtime-main.9793a387.js.map",
     "static/js/2.447862b7.chunk.js": "/CECOM-Web-ReactJS/static/js/2.447862b7.chunk.js",
     "static/js/2.447862b7.chunk.js.map": "/CECOM-Web-ReactJS/static/js/2.447862b7.chunk.js.map",
     "index.html": "/CECOM-Web-ReactJS/index.html",
-    "static/css/main.bfde937a.chunk.css.map": "/CECOM-Web-ReactJS/static/css/main.bfde937a.chunk.css.map",
+    "static/css/main.35f3fc20.chunk.css.map": "/CECOM-Web-ReactJS/static/css/main.35f3fc20.chunk.css.map",
     "static/js/2.447862b7.chunk.js.LICENSE.txt": "/CECOM-Web-ReactJS/static/js/2.447862b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9793a387.js",
     "static/js/2.447862b7.chunk.js",
-    "static/css/main.bfde937a.chunk.css",
-    "static/js/main.bd17f205.chunk.js"
+    "static/css/main.35f3fc20.chunk.css",
+    "static/js/main.4bb48aef.chunk.js"
   ]
 }
