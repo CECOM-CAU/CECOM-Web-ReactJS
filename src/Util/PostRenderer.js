@@ -23,10 +23,7 @@ const PostRenderer = () => {
                 ? <SyntaxHighlighter style={darcula} language={match[1]} children={String(children).replace(/\n$/, '')} {...props}/>
                 : <code className={className} {...props}/>;
         },
-
-        img: ({src, width, ...props}) =>
-            <img src={require(`../Post/${postType}/${postID}/${src}`)} width={width} {...props} />,
-
+        
         strong: ({children, ...props}) =>
             <Strong {...props}>{children}</Strong>,
         
