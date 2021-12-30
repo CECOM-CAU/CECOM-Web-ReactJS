@@ -4,23 +4,17 @@ import styled from "styled-components";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {darcula} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-const PostRenderer = (postID, postType) => {
+const PostRenderer = () => {
     return {
         a: ({children, ...props}) =>{
-            if(postType !== "About"){
-                return(
-                    <a target="_blank" {...props}>
-                        <AContainer>
-                            <p className="postLinkTitle">{children}</p>
-                            <p className="postLinkURL">{props.href}</p>
-                        </AContainer>
-                    </a>
-                )
-            }else{
-                return(
-                    <A target="_blank" {...props}>{children}</A>
-                )
-            }
+            return(
+                <a target="_blank" {...props}>
+                    <AContainer>
+                        <p className="postLinkTitle">{children}</p>
+                        <p className="postLinkURL">{props.href}</p>
+                    </AContainer>
+                </a>
+            )
         },
         
         code: ({inline, className, children, ...props}) => {

@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown";
 import RehypeRaw from "rehype-raw";
 import RemarkGFM from "remark-gfm";
 
+import PostRenderer from "../../Util/PostRenderer";
+
 import "./PostView.js"
 
 const PostView = (props) => {
@@ -73,7 +75,7 @@ const PostView = (props) => {
                                 <div className="markdown-body">
                                     <ReactMarkdown
                                         children={postContent}
-                                        components={PostRenderer(postID, postType)}
+                                        components={PostRenderer(postID)}
                                         rehypePlugins={[RehypeRaw]}
                                         remarkPlugins={[RemarkGFM]} />
                                 </div>
