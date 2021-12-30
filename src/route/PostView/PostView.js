@@ -73,6 +73,7 @@ const PostView = (props) => {
                                 <div className="markdown-body">
                                     <ReactMarkdown
                                         children={postContent}
+                                        components={PostRenderer(postID, postType)}
                                         rehypePlugins={[RehypeRaw]}
                                         remarkPlugins={[RemarkGFM]} />
                                 </div>
