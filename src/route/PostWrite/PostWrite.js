@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Redirect} from 'react-router'
 
 import axios from "axios";
 
@@ -11,8 +10,6 @@ const PostWrite = (props) => {
     const [author, setAuthor] = useState("작성자");
     const [content, setContent] = useState("내용");
     const [title, setTitle] = useState("제목");
-
-    const [isRedirect, setIsRedirect] = useState(false);
 
     const onTextChange = (e) => {
         switch(e.target.name){
@@ -38,7 +35,7 @@ const PostWrite = (props) => {
         ).then(
             function resultOK() {
                 alert("게시글 등록이 완료되었습니다.");
-                setIsRedirect(true);
+                window.location.href = "https://cecom.dev/board"
             }
         ).catch(
             function resultError(error) {
@@ -48,17 +45,12 @@ const PostWrite = (props) => {
     }
 
     return(
-        <>
-            isRedirect ?
-                <Redirect to="/board" />
-            :
-                <div>
-                    <input onChange={onTextChange} type="text" name="postTitle" placeholder="제목" />
-                    <input onChange={onTextChange} type="text" name="postContent" placeholder="내용" />
-                    <input onChange={onTextChange} type="text" name="postAuthor" placeholder="작성자" />
-                    <button onClick={onUploadClick}>업로드</button>
-                </div>
-        </>
+        <div>
+            <input onChange={onTextChange} type="text" name="postTitle" placeholder="제목" />
+            <input onChange={onTextChange} type="text" name="postContent" placeholder="내용" />
+            <input onChange={onTextChange} type="text" name="postAuthor" placeholder="작성자" />
+            <button onClick={onUploadClick}>업로드</button>
+        </div>
     )
 }
 
