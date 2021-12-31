@@ -33,9 +33,16 @@ const Board = () => {
         );
     }, []);
 
+    const onBtnNewClick = () => {
+        window.location.href = "https://cecom.dev/postwrite/new";
+    }
+
     return(
         <div id="divBoard">
             <div id="divBoardContainer">
+                <div id="divBoardNew">
+                    <button onClick={onBtnNewClick} id="buttonNew">새 글</button>
+                </div>
                 <div id="divBoardTitle">
                     <div id="divBoardTitleText">
                         <p class="pBoardPostTitle">제목</p>
