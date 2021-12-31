@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useHistory} from 'react-router'
+import {Redirect} from 'react-router'
 
 import axios from "axios";
 
@@ -11,6 +11,8 @@ const PostWrite = (props) => {
     const [author, setAuthor] = useState("작성자");
     const [content, setContent] = useState("내용");
     const [title, setTitle] = useState("제목");
+
+    const [isRedirect, setIsRedirect] = useState(false);
 
     const onTextChange = (e) => {
         switch(e.target.name){
@@ -34,26 +36,29 @@ const PostWrite = (props) => {
                 "postTitle": title,
             }
         ).then(
-            function resultOK(response) {
+            function resultOK() {
                 alert("게시글 등록이 완료되었습니다.");
-                let history = useHistory();
-                history.push("/board");
+                setIsRedirect(true);
             }
         ).catch(
-            function resultError (error) {
-                console.log(error);
+            function resultError(error) {
+                alert(`오류가 발생하였습니다. 다시 시도해주세요. ${error}`);
             }
         );
     }
 
     return(
-        <div>
-            PostWrite {postID}
-            <input onChange={onTextChange} type="text" name="postTitle" placeholder="제목" />
-            <input onChange={onTextChange} type="text" name="postContent" placeholder="내용" />
-            <input onChange={onTextChange} type="text" name="postAuthor" placeholder="작성자" />
-            <button onClick={onUploadClick}>업로드</button>
-        </div>
+        <>
+            isRedirect ?
+                <Redirect to="/board" />
+            :
+                <div>
+                    <input onChange={onTextChange} type="text" name="postTitle" placeholder="제목" />
+                    <input onChange={onTextChange} type="text" name="postContent" placeholder="내용" />
+                    <input onChange={onTextChange} type="text" name="postAuthor" placeholder="작성자" />
+                    <button onClick={onUploadClick}>업로드</button>
+                </div>
+        </>
     )
 }
 
