@@ -1,0 +1,34 @@
+#simpleIntro{
+    width: 600px;
+    height: 250px;
+    margin: auto;
+    padding: 80px;
+    align-items: center;
+    text-align: left;
+    font-size: small;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#simpleIntroTitle {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: #0A154E;
+    color: #F5D040;
+    padding: 100px 20px 10px 20px;
+    margin-bottom: 10px;
+}
+
+#simpleContentMain {
+    border-left: 2px solid #0A154E;
+    padding: 30px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+hr {
+    width: 50px;
+    background-color: gray;
+}
+
+span {
+    font-weight: bolder;
+    font-size: xx-large;
+}

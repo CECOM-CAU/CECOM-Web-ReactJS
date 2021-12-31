@@ -1,0 +1,19 @@
+#reg {
+    width: 600px;
+    height: 30px;
+    margin: auto;
+    padding: 80px;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#email {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
+    background-color: #F5D040;
+    color: white;
+    width: 210px;
+    margin: auto;
+}
