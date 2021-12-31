@@ -23,13 +23,19 @@ const PostWrite = (props) => {
         }
     }
 
+    const onUploadClick = () => {
+        console.log(author);
+        console.log(content);
+        console.log(title);
+    }
+
     return(
         <div>
             PostWrite {postID}
             <input onChange={onTextChange} type="text" name="postTitle" placeholder="제목" />
             <input onChange={onTextChange} type="text" name="postContent" placeholder="내용" />
             <input onChange={onTextChange} type="text" name="postAuthor" placeholder="작성자" />
-            <button>업로드</button>
+            <button onClick={onUploadClick}>업로드</button>
         </div>
     )
 }
