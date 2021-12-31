@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import axios from "axios";
 
-import "./PostWrite.js"
+import "./PostWrite.css"
 
 const PostWrite = (props) => {
     let postID = props.match.params.postType;
