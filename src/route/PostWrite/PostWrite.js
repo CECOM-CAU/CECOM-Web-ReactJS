@@ -46,8 +46,8 @@ const PostWrite = (props) => {
 
     return(
         <div className="divPostWrite">
-            <textarea onChange={onTextChange} id="inputPostTitle" type="text" name="postTitle" placeholder="제목" />
-            <textarea onChange={onTextChange} id="inputPostAuthor" type="text" name="postAuthor" placeholder="작성자" />
+            <input onChange={onTextChange} id="inputPostTitle" type="text" name="postTitle" placeholder="제목" />
+            <input onChange={onTextChange} id="inputPostAuthor" type="text" name="postAuthor" placeholder="작성자" />
             <textarea onChange={onTextChange} id="inputPostContent" type="text" name="postContent" placeholder="내용" />
             <button onClick={onUploadClick} id="inputUpload">업로드</button>
         </div>
