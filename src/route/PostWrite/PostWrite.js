@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Redirect} from 'react-router'
 
 import axios from "axios";
 
@@ -39,6 +40,10 @@ const PostWrite = (props) => {
         ).then(
             function resultOK(response) {
                 console.log(response);
+                alert("게시글 등록이 완료되었습니다.");
+                return(
+                    <Redirect to="/board"/>
+                );
             }
         ).catch(
             function resultError (error) {
