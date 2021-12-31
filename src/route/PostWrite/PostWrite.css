@@ -1,0 +1,19 @@
+.divPostWrite{
+    display: flex;
+    flex-direction: column;
+}
+
+#inputPostAuthor{
+    height: 30px;
+    width: 200px;
+}
+
+#inputPostContent{
+    height: 300px;
+    width: 100%;
+}
+
+#inputPostTitle{
+    height: 30px;
+    width: 100%;
+}
