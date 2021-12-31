@@ -27,6 +27,22 @@ const PostWrite = (props) => {
         console.log(author);
         console.log(content);
         console.log(title);
+
+        axios.post("https://api.cecom.dev/writePost",
+            {
+                "postAuthor": author,
+                "postContent": content,
+                "postTitle": title,
+            }
+        ).then(
+            function resultOK(response) {
+                console.log(response);
+            }
+        ).catch(
+            function resultError (error) {
+                console.log(error);
+            }
+        );
     }
 
     return(
