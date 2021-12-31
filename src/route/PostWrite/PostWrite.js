@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Redirect} from 'react-router'
 
 import axios from "axios";
 
@@ -34,22 +33,19 @@ const PostWrite = (props) => {
                 "postTitle": title,
             }
         ).then(
-            function resultOK(response) {
+            function resultOK() {
                 alert("게시글 등록이 완료되었습니다.");
-                return(
-                    <Redirect to="/board"/>
-                );
+                window.location.href = "https://cecom.dev/board"
             }
         ).catch(
-            function resultError (error) {
-                console.log(error);
+            function resultError(error) {
+                alert(`오류가 발생하였습니다. 다시 시도해주세요. ${error}`);
             }
         );
     }
 
     return(
         <div>
-            PostWrite {postID}
             <input onChange={onTextChange} type="text" name="postTitle" placeholder="제목" />
             <input onChange={onTextChange} type="text" name="postContent" placeholder="내용" />
             <input onChange={onTextChange} type="text" name="postAuthor" placeholder="작성자" />
