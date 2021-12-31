@@ -30,7 +30,7 @@
     "react-router-app": "^0.1.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
-    "react-syntax-highlighter": "^15.4.3",
+    "react-syntax-highlighter": "^15.4.5",
     "rehype-raw": "^6.1.0",
     "remark-gfm": "^3.0.1",
     "styled-components": "^5.2.1",
