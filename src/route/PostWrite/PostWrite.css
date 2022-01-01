@@ -13,6 +13,11 @@
     width: 100%;
 }
 
+#inputPostPW{
+    height: 30px;
+    width: 200px;
+}
+
 #inputPostTitle{
     height: 30px;
     width: 100%;
