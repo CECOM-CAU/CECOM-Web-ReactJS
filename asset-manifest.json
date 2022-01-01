@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.824607eb.chunk.css",
+    "main.css": "/static/css/main.7299e079.chunk.css",
     "main.js": "/static/js/main.2e5d0508.chunk.js",
     "main.js.map": "/static/js/main.2e5d0508.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6e43ef1d.js",
@@ -8,7 +8,7 @@
     "static/js/2.ca49818a.chunk.js": "/static/js/2.ca49818a.chunk.js",
     "static/js/2.ca49818a.chunk.js.map": "/static/js/2.ca49818a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.824607eb.chunk.css.map": "/static/css/main.824607eb.chunk.css.map",
+    "static/css/main.7299e079.chunk.css.map": "/static/css/main.7299e079.chunk.css.map",
     "static/js/2.ca49818a.chunk.js.LICENSE.txt": "/static/js/2.ca49818a.chunk.js.LICENSE.txt",
     "static/media/arduino.png": "/static/media/arduino.fcac6b2a.png",
     "static/media/react.png": "/static/media/react.f9c29602.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.6e43ef1d.js",
     "static/js/2.ca49818a.chunk.js",
-    "static/css/main.824607eb.chunk.css",
+    "static/css/main.7299e079.chunk.css",
     "static/js/main.2e5d0508.chunk.js"
   ]
 }
