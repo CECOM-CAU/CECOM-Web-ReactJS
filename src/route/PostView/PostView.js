@@ -53,7 +53,12 @@ const PostView = (props) => {
                 }
             ).then(
                 function resultOK(response) {
-                    console.log(response.data.RESULT.RESULT_CODE);
+                    if(response.data.RESULT.RESULT_CODE == 0){
+                        alert("게시글 삭제가 완료되었습니다.");
+                        window.location.href = "https://cecom.dev/board"
+                    }else{
+                        alert("비밀번호가 올바르지 않습니다.")
+                    }
                 }
             ).catch(
                 function resultError(error) {
