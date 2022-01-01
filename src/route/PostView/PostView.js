@@ -49,7 +49,7 @@ const PostView = (props) => {
         axios.post("https://api.cecom.dev/deletePost",
                 {
                     "postID": postID,
-                    "postPassword": password1
+                    "postPassword": password
                 }
             ).then(
                 function resultOK(response) {
