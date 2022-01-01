@@ -9,6 +9,8 @@ const PostWrite = (props) => {
 
     const [author, setAuthor] = useState("작성자");
     const [content, setContent] = useState("내용");
+    const [password1, setPW1] = useState("비밀번호");
+    const [password2, setPW2] = useState("비밀번호 확인");
     const [title, setTitle] = useState("제목");
 
     const onTextChange = (e) => {
@@ -19,6 +21,12 @@ const PostWrite = (props) => {
             case "postContent":
                 setContent(e.target.value);
                 break;
+            case "postPW1":
+                setPW1(e.target.value);
+                break;
+            case "postPW2":
+                setPW2(e.target.value);
+                break;
             case "postTitle":
                 setTitle(e.target.value);
                 break;
@@ -26,22 +34,26 @@ const PostWrite = (props) => {
     }
 
     const onUploadClick = () => {
-        axios.post("https://api.cecom.dev/writePost",
-            {
-                "postAuthor": author,
-                "postContent": content,
-                "postTitle": title,
-            }
-        ).then(
-            function resultOK() {
-                alert("게시글 등록이 완료되었습니다.");
-                window.location.href = "https://cecom.dev/board"
-            }
-        ).catch(
-            function resultError(error) {
-                alert(`오류가 발생하였습니다. 다시 시도해주세요. ${error}`);
-            }
-        );
+        if(password1 == password2){
+            axios.post("https://api.cecom.dev/writePost",
+                {
+                    "postAuthor": author,
+                    "postContent": content,
+                    "postTitle": title,
+                }
+            ).then(
+                function resultOK() {
+                    alert("게시글 등록이 완료되었습니다.");
+                    window.location.href = "https://cecom.dev/board"
+                }
+            ).catch(
+                function resultError(error) {
+                    alert(`오류가 발생하였습니다. 다시 시도해주세요. ${error}`);
+                }
+            );
+        }else{
+            alert("비밀번호 확인이 일치하지 않습니다.")
+        }
     }
 
     return(
@@ -49,6 +61,8 @@ const PostWrite = (props) => {
             <input onChange={onTextChange} id="inputPostTitle" type="text" name="postTitle" placeholder="제목" />
             <input onChange={onTextChange} id="inputPostAuthor" type="text" name="postAuthor" placeholder="작성자" />
             <textarea onChange={onTextChange} id="inputPostContent" type="text" name="postContent" placeholder="내용" />
+            <input onChange={onTextChange} id="inputPostPW1" type="text" name="postPW1" placeholder="비밀번호" />
+            <input onChange={onTextChange} id="inputPostPW2" type="text" name="postPW2" placeholder="비밀번호 확인" />
             <button onClick={onUploadClick} id="inputUpload">업로드</button>
         </div>
     )
