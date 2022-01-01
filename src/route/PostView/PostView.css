@@ -12,6 +12,16 @@
     width: 100%;
 }
 
+.PostManage{
+    height: 30px;
+    width: 100%;
+}
+
+.PostManage button{
+    height: 30px;
+    width: 50px;
+}
+
 .PostSeperator{
     width: 800px;
 

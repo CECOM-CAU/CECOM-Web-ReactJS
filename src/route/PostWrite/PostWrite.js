@@ -39,6 +39,7 @@ const PostWrite = (props) => {
                 {
                     "postAuthor": author,
                     "postContent": content,
+                    "postPassword": password1,
                     "postTitle": title,
                 }
             ).then(
