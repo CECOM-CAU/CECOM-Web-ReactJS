@@ -22,6 +22,11 @@
     width: 50px;
 }
 
+.PostManage input{
+    height: 30px;
+    width: 50px;
+}
+
 .PostSeperator{
     width: 800px;
 
