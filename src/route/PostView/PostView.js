@@ -7,7 +7,7 @@ import RemarkGFM from "remark-gfm";
 
 import PostRenderer from "../../Util/PostRenderer";
 
-import "./PostView.js"
+import "./PostView.css"
 
 const PostView = (props) => {
     let postID = props.match.params.postID;
