@@ -12,18 +12,6 @@ import "./PostView.js"
 const PostView = (props) => {
     let postID = props.match.params.postID;
 
-    const [postData, setPostData] = useState({
-        "RESULT": {
-            "RESULT_CODE": 100,
-            "RESULT_MSG": "NOT LOADED"
-        },
-        "DATA": {
-            "author": "",
-            "content": "",
-            "title": "게시글을 불러오는 중입니다..."
-        }
-    });
-
     useEffect(() => {
         axios.post("https://api.cecom.dev/getPost",
             {
@@ -39,6 +27,40 @@ const PostView = (props) => {
             }
         );
     }, []);
+
+    const [postData, setPostData] = useState({
+        "RESULT": {
+            "RESULT_CODE": 100,
+            "RESULT_MSG": "NOT LOADED"
+        },
+        "DATA": {
+            "author": "",
+            "content": "",
+            "title": "게시글을 불러오는 중입니다..."
+        }
+    });
+    const [password, setPassword] = useState("제목");
+
+    const onTextChange = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const onDeleteClick = () => {
+        axios.post("https://api.cecom.dev/deletePost",
+                {
+                    "postID": postID,
+                    "postPassword": password1
+                }
+            ).then(
+                function resultOK(response) {
+                    console.log(response.data.RESULT.RESULT_CODE);
+                }
+            ).catch(
+                function resultError(error) {
+                    alert(`오류가 발생하였습니다. 다시 시도해주세요. ${error}`);
+                }
+            );
+    }
 
     return(
         <>
@@ -79,6 +101,11 @@ const PostView = (props) => {
                                         rehypePlugins={[RehypeRaw]}
                                         remarkPlugins={[RemarkGFM]} />
                                 </div>
+                            </div>
+
+                            <div className="PostManage">
+                                <input onChange={onTextChange} id="inputPW" type="text" name="postPW" placeholder="비밀번호" />
+                                <button onClick={onDeleteClick} id="inputDelete">삭제</button>
                             </div>
                         </div>
                     )
