@@ -62,8 +62,8 @@ const PostWrite = (props) => {
             <input onChange={onTextChange} id="inputPostTitle" type="text" name="postTitle" placeholder="제목" />
             <input onChange={onTextChange} id="inputPostAuthor" type="text" name="postAuthor" placeholder="작성자" />
             <textarea onChange={onTextChange} id="inputPostContent" type="text" name="postContent" placeholder="내용" />
-            <input onChange={onTextChange} id="inputPostPW" type="text" name="postPW1" placeholder="비밀번호" />
-            <input onChange={onTextChange} id="inputPostPW" type="text" name="postPW2" placeholder="비밀번호 확인" />
+            <input onChange={onTextChange} id="inputPostPW" type="password" name="postPW1" placeholder="비밀번호" />
+            <input onChange={onTextChange} id="inputPostPW" type="password" name="postPW2" placeholder="비밀번호 확인" />
             <button onClick={onUploadClick} id="inputUpload">업로드</button>
         </div>
     )

@@ -109,7 +109,7 @@ const PostView = (props) => {
                             </div>
 
                             <div className="PostManage">
-                                <input onChange={onTextChange} id="inputPW" type="text" name="postPW" placeholder="비밀번호" />
+                                <input onChange={onTextChange} id="inputPW" type="password" name="postPW" placeholder="비밀번호" />
                                 <button onClick={onDeleteClick} id="inputDelet  e">삭제</button>
                             </div>
                         </div>
